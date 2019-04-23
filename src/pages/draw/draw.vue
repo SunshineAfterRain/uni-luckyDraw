@@ -1,8 +1,8 @@
 <template>
   <div class="draw-box" v-if="login">
     <div class="draw-list"   >
-      <div class="draw-item" v-for="(item,index) in options" :key="index" @click="goTo(index)">
-        <div class="icon" :icon="item.icon" ></div>
+      <div class="draw-item radius text-center shadow-blur" v-for="(item,index) in options" :key="index" @click="goTo(index)" :class="item.class">
+        <div class="icon iconfont" :class="item.icon" ></div>
         <div class="title">{{item.text}}</div>
       </div>
     </div>
@@ -17,12 +17,18 @@ export default {
       login:false,
       options: [{
         icon: 'icon-draw',
-        color: '#e54d42',
+        class: 'bg-gradual-red',
         text: '发起抽奖',
         url:'/pages/draw/actionForm'
       },{
         icon: 'icon-draw',
-        color: '#e54d42',
+        class: 'bg-gradual-orange',
+        text: '我的发起',
+        url:'/pages/draw/actionForm'
+      },
+      {
+        icon: 'icon-draw',
+        class: '#e54d42',
         text: '我的发起',
         url:'/pages/draw/actionForm'
       }]
@@ -64,5 +70,26 @@ export default {
 <style scoped>
 .draw-box {
   padding: 20upx;
+  
 }
+.draw-list {
+    display: flex;
+  }
+  .draw-item{
+    width: 220upx;
+    height: 220upx;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30upx;
+  }
+   .draw-item .icon {
+     font-size: 50upx;
+     margin-bottom: 30upx;
+   }
+  .draw-item:not(:nth-of-type(3n)) {
+    margin-right: 30upx;
+  }
 </style>
