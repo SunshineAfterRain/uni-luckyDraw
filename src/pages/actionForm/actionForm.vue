@@ -1,6 +1,6 @@
 <template>
-  <view class="actionForm uni-padding-wrap uni-common-mt" >
-      <form  @submit="formSubmit" @reset="formReset">
+  <div class="actionForm uni-padding-wrap uni-common-mt" >
+      <form >
             <view class="uni-form-item uni-column cu-form-group">
                 <view class="title">活动名称</view>
                 <input class="uni-input" v-model="actionForm.name" name="name" placeholder="请输入活动名称" />
@@ -37,12 +37,10 @@
                 <button class="cu-btn bg-red lg" @click="submit">发起活动</button>
             </view>
       </form>
-  </view>
+  </div>
 </template>
-
 <script>
 import Util from '@/utils/index.js'
-import uniGrid from '@dcloudio/uni-ui/lib/uni-grid/uni-grid.vue'
 import Model from '@/utils/model.js'
 export default {
   data () {
@@ -58,11 +56,8 @@ export default {
         nowTime: ''
     }
   },
-
   components: {
-
   },
-
   methods: {
     bindTimeChange(e){
          this.actionForm.beginTime = e.target.value
@@ -108,7 +103,6 @@ export default {
         }
     }
   },
-
   onLoad () {
       var date = new Date()
       this.nowTime = Util.formatTime(date)

@@ -14,7 +14,7 @@ export default {
         icon: 'icon-draw',
         color: '#e54d42',
         text: '发起抽奖',
-        url:'/pages/draw/actionForm'
+        url:'/pages/actionForm/actionForm'
       }]
     }
   },
@@ -38,6 +38,7 @@ export default {
 				})
       },
       goTo({index}){
+
         uni.navigateTo({
           url: this.options[index].url
         })

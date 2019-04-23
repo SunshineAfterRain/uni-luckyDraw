@@ -7,7 +7,7 @@ const model = {
     return success
   },
   actionForm: async (data) => {
-    const success = await request.get(api.actionForm, data)
+    const success = await request.post(api.actionForm, data)
     return success
   }
 }
