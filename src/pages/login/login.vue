@@ -43,7 +43,11 @@ export default {
 
                 wx.setStorage({
                   key: 'userInfo',
-                  data: res.data
+                  data: res.data.UserInfo
+                })
+                wx.setStorage({
+                  key: 'token',
+                  data: res.data.Token
                 })
                 uni.navigateBack()
               } else {

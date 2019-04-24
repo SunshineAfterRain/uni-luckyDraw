@@ -2,12 +2,12 @@ import request from './request'
 import api from './api'
 
 const model = {
-  login: async (data) => {
-    const success = await request.get(api.login, data)
+  login: async (data, header) => {
+    const success = await request.get(api.login, data, header)
     return success
   },
-  actionForm: async (data) => {
-    const success = await request.post(api.actionForm, data)
+  actionForm: async (data, header) => {
+    const success = await request.post(api.actionForm, data, header)
     return success
   }
 }

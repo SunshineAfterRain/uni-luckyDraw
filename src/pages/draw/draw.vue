@@ -1,11 +1,16 @@
 <template>
   <div class="draw-box" v-if="login">
-    <uni-grid :options="options" @click="goTo()" ></uni-grid>
+    <div class="draw-list"   >
+      <div class="draw-item" v-for="(item,index) in options" :key="index" @click="goTo(index)">
+        <div class="icon" :icon="item.icon" ></div>
+        <div class="title">{{item.text}}</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import uniGrid from '@dcloudio/uni-ui/lib/uni-grid/uni-grid.vue'
+// import uniGrid from '@dcloudio/uni-ui/lib/uni-grid/uni-grid.vue'
 export default {
   data () {
     return {
@@ -14,13 +19,13 @@ export default {
         icon: 'icon-draw',
         color: '#e54d42',
         text: '发起抽奖',
-        url:'/pages/actionForm/actionForm'
-      }]
+        url:'/pages/draw/actionForm'
+      }
+      ]
     }
   },
 
   components: {
-    uniGrid
   },
 
   methods: {
@@ -37,8 +42,7 @@ export default {
 					}
 				})
       },
-      goTo({index}){
-
+      goTo(index){
         uni.navigateTo({
           url: this.options[index].url
         })

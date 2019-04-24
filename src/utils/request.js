@@ -1,6 +1,6 @@
 
 const request = {
-  get (url, data) {
+  get (url, data, header = {'Content-Type': 'application/json' }) {
     uni.showLoading({
       title: '加载中'
     })
@@ -9,9 +9,7 @@ const request = {
         url: url,
         data: data,
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        header: {
-          'Content-Type': 'application/json'
-        }, // 设置请求的 header
+        header: header, // 设置请求的 header
         success: function (res) {
           // success
           uni.hideLoading()
@@ -36,18 +34,17 @@ const request = {
       })
     })
   },
-  post (url, data) {
+  post (url, data, header = {'Content-Type': 'application/json' }) {
     uni.showLoading({
       title: '加载中'
     })
+    console.log(header)
     return new Promise((resolve, reject) => {
       uni.request({
         url: url,
         data: data,
         method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        header: {
-          'Content-Type': 'application/json'
-        }, // 设置请求的 header
+        header: header, // 设置请求的 header
         success: function (res) {
           // success
           uni.hideLoading()

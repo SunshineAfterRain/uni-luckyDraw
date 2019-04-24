@@ -96,8 +96,12 @@ export default {
           return
         }
         let userInfoId = uni.getStorageSync('userInfo').id 
-        let data = {...this.actionForm, userInfoId}
-        let suc = await Model.actionForm(data)
+        let data = {...this.actionForm, userInfoId, sessionNum: 'a'}
+        let header = {
+          'Content-Type': 'application/json',
+          'USER_TOKEN_KEY':  uni.getStorageSync('token')
+        }
+        let suc = await Model.actionForm(data, header)
         if(suc.code == 200){
           console.log(suc.data)
         }

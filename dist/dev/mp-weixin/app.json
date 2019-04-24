@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/ucenter/ucenter",
+    "pages/login/login",
+    "pages/draw/draw",
+    "pages/draw/actionForm"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "一夜暴富",
+    "navigationBarBackgroundColor": "#2F85FC",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#2F85FC",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "static/home.png",
+        "selectedIconPath": "static/home-active.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/draw/draw",
+        "iconPath": "static/draw.png",
+        "selectedIconPath": "static/draw-active.png",
+        "text": "抽奖"
+      },
+      {
+        "pagePath": "pages/ucenter/ucenter",
+        "iconPath": "static/center.png",
+        "selectedIconPath": "static/center-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
