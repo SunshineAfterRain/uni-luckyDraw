@@ -1,5 +1,41 @@
 
-.draw-box.data-v-280f6d0b {
+.draw-box.data-v-92cf9968 {
   padding: 20rpx;
+}
+.draw-list.data-v-92cf9968 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.draw-item.data-v-92cf9968{
+    width: 220rpx;
+    height: 220rpx;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 30rpx;
+}
+.draw-item .icon.data-v-92cf9968 {
+     font-size: 50rpx;
+     margin-bottom: 30rpx;
+}
+.draw-item.data-v-92cf9968:not(:nth-of-type(3n)) {
+    margin-right: 30rpx;
 }
 
