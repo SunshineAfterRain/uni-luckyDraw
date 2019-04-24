@@ -46,9 +46,17 @@ const request = {
         method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         header: header, // 设置请求的 header
         success: function (res) {
-          // success
-          uni.hideLoading()
-          resolve(res.data)
+          if(res.data.code == 300){
+            uni.navigateTo({
+              url: '/pages/login/login'
+            })
+          }else {
+            // success
+            uni.hideLoading()
+            resolve(res.data)
+          }
+          
+
         },
         fail: function (error) {
           // fail

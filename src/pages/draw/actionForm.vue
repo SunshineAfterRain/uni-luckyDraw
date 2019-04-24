@@ -1,6 +1,6 @@
 <template>
-  <div class="actionForm uni-padding-wrap uni-common-mt" >
-      <form >
+  <view class="actionForm uni-padding-wrap uni-common-mt" >
+      <form  >
             <view class="uni-form-item uni-column cu-form-group">
                 <view class="title">活动名称</view>
                 <input class="uni-input" v-model="actionForm.name" name="name" placeholder="请输入活动名称" />
