@@ -37,7 +37,7 @@
                 <button class="cu-btn bg-red lg" @click="submit">发起活动</button>
             </view>
       </form>
-  </div>
+  </view>
 </template>
 <script>
 import Util from '@/utils/index.js'
